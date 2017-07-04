@@ -159,7 +159,6 @@
 
 - (void)testSendmessage {
     Person *person = [[Person alloc] init];
-    [person performSelector:@selector(working)];
 }
 
 

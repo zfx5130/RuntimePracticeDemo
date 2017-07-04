@@ -8,11 +8,13 @@
 
 #import "Person.h"
 #import <objc/runtime.h>
+#import <objc/message.h>
 
 @implementation Person
 
 #pragma mark - Public
 
+//默认有两个参数(id self,SEL sel)
 - (void)eat:(NSString *)name
       array:(NSArray *)array {
     NSLog(@"吃");
@@ -72,7 +74,6 @@
     free(properties);
     
     return self;
-    
 }
 
 @end

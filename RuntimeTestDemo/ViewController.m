@@ -10,6 +10,8 @@
 
 #import "Person.h"
 #include <objc/runtime.h>
+#import <objc/message.h>
+
 
 @interface ViewController ()
 
@@ -27,6 +29,8 @@
     [self outputPersionMethodName];
     [self outputPersonProtocolName];
     [self testPersonEncode];
+    
+    [self testSendmessage];
 }
 
 
@@ -151,6 +155,11 @@
     
     NSLog(@"person:::::%@",unArchivePerson);
     NSLog(@"path:::::%@",path);
+}
+
+- (void)testSendmessage {
+    Person *person = [[Person alloc] init];
+    [person performSelector:@selector(working)];
 }
 
 
